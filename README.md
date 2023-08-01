@@ -28,7 +28,7 @@ This template requires access to the following Yext products:
 
 This template requires inputs from Marketo including a Client ID and Client Secret. This will allow access to the APIs required to create new leads. Follow the instructions below to find these values in Marketo:
 
-1. In Marketo, navigate to **Admin **> **Integration** > **LaunchPoint**.
+1. In Marketo, navigate to **Admin** > **Integration** > **LaunchPoint**.
 2. Click **View Details** for an existing REST Service that has access to the Leads API. If a REST Service with appropriate permissions does not already exist, create one following [this guide](https://developers.marketo.com/blog/quick-start-guide-for-marketo-rest-api/) from Marketo.
 3. Keep the **Client ID** and **Client Secret** on hand as they will be required inputs during the installation of the template.
 4. Now you’re ready to proceed with the template installation!
