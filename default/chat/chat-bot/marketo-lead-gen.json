@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schema.yext.com/config/chat/chat-bot/v1",
+  "$id": "marketoLeadGenBot",
+  "name": "Marketo Lead Generation Bot",
+  "initialMessage": "Hi! This is Marketo Lead Gen. How can I help you?",
+  "goals": {
+    "CHIT_CHAT": {
+      "examples": [
+        "How are you doing?",
+        "What\u0027s going on?",
+        "What\u0027s your name?",
+        "Thank you!",
+        "Great"
+      ],
+      "goal": "Engage in a casual conversation with the user.",
+      "instructions": [
+        {
+          "reply": {
+            "instruction": "Reply casually to the user, engaging in cordial conversation.",
+            "mode": "CONVERSATIONAL"
+          }
+        }
+      ]
+    },
+    "schedule-demo": {
+      "examples": [
+        "I\u0027d like a demo",
+        "can I see the platform",
+        "book a demo",
+        "talk to a sales rep",
+        "how do I get a demo"
+      ],
+      "goal": "Schedule Demo",
+      "instructions": [
+        {
+          "collect": {
+            "fields": [
+              {
+                "description": "The user\u0027s email address",
+                "id": "email"
+              },
+              {
+                "description": "The user\u0027s first name",
+                "id": "firstName",
+                "optional": true
+              },
+              {
+                "description": "The user\u0027s last name",
+                "id": "lastName",
+                "optional": true
+              },
+              {
+                "description": "The name of the company where the user works",
+                "id": "company"
+              }
+            ],
+            "instruction": "Collect the user\u0027s name, email and company."
+          }
+        },
+        {
+          "function": {
+            "functionName": "marketoHandler",
+            "pluginId": "marketoLeadGen"
+          }
+        },
+        {
+          "reply": {
+            "instruction": "Tell the user a sales representative should be reaching out to them to schedule a demo shortly. Thank them for their time.",
+            "mode": "CONVERSATIONAL"
+          }
+        }
+      ]
+    }
+  }
+}
