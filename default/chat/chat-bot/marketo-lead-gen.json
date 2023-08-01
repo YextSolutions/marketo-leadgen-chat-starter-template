@@ -37,20 +37,24 @@
             "fields": [
               {
                 "description": "The user\u0027s email address",
+                "type": "STRING",
                 "id": "email"
               },
               {
                 "description": "The user\u0027s first name",
                 "id": "firstName",
+                "type": "STRING",
                 "optional": true
               },
               {
                 "description": "The user\u0027s last name",
                 "id": "lastName",
+                "type": "STRING",
                 "optional": true
               },
               {
                 "description": "The name of the company where the user works",
+                "type": "STRING",
                 "id": "company"
               }
             ],
